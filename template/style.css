@@ -184,3 +184,39 @@ section {
 .card-body {
     padding: 20px; /* Espaciado interno para el texto */
 }
+
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.form-section {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 50px 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px; /* Ancho máximo del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.btn-verde-personalizado {
+    background-color: #5d7457; /* Color verde personalizado */
+    border-color: #5d7457; /* Color del borde del botón */
+}
+
+.btn-verde-personalizado:hover {
+    background-color: #4a6c48; /* Color al pasar el cursor */
+    border-color: #4a6c48; /* Color del borde al pasar el cursor */
+}
+
+.footer-text {
+    margin: 20px 0; /* Espaciado vertical para el texto del pie de página */
+}
+
+.footer-link {
+    color: #5d7457; /* Color verde para el enlace del pie de página */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
