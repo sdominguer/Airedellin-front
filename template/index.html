@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AireDellin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de tener esta hoja de estilo -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pos-f-t">
+        <nav class="navbar" style="background-color: #5d7457;">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">AireDellin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-verde-militar p-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white menu-item" href="#">Map with sensors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white menu-item" href="#">Generate Route with less Pollution</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white menu-item" href="#">Predict Air Quality in the Globe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white menu-item" href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-section d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <h1 class="display-4">AireDellin</h1>
+            <p class="lead">Bienvenidos al portal de calidad del aire en Medellín</p>
+            <a href="#" class="btn btn-verde-personalizado btn-lg">Explorar más</a>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Live Air Quality Dashboard</h5>
+                        <p class="card-text">Check air quality levels in real time.</p>
+                        <a href="#" class="btn btn-verde-personalizado">Data chart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Machine Learning Predictions</h5>
+                        <p class="card-text">Analyze and predict future air quality trends using our machine learning models.</p>
+                        <a href="#" class="btn btn-verde-personalizado">Run ML Prediction</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Statistics (In progress 🏗️🚧)</h5>
+                        <p class="card-text">Analyze air quality trends using our statistics methods.</p>
+                        <a href="#" class="btn btn-verde-personalizado">Run statistics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center">Hel us improve!</h2>
+        <p class="text-center">Make a donation to support our air quality monitoring initiatives.</p>
+        <div class="text-center">
+            <img src="../static/qr.png" alt="Código QR para donaciones" class="img-fluid" style="max-width: 300px; margin-bottom: 20px;">
+            <p class="lead">Scan the QR code to donate.</p>
+            <a href="#" class="btn btn-verde-personalizado btn-lg">Donate now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="text-center">&copy; 2024 AireDellin. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
