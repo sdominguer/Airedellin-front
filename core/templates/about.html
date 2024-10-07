@@ -1,78 +1,73 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div>
-            <h1><b>Airedellín</b> 🌿</h1>
-            <p><b>Improving Medellín’s air quality for a better tomorrow.<b></p>
-            <a href="#about" class="btn">Learn More</a>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Airedellín</h2>
-        <p>
-            Airedellín is a citizen science initiative aimed at addressing the growing issue of air quality in Medellín. 
-            We leverage modern technologies like machine learning, interactive maps, and sensor data to provide insights 
-            and predictions on PM2.5 levels. Our goal is to empower the community to take actionable steps toward 
-            improving public health.
+<header class="hero-section d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+        <h1 class="display-4">AireDellin</h1>
+        <p class="lead">Bienvenidos al portal de calidad del aire en Medellín</p>
+        <a href="#" class="btn btn-verde-personalizado btn-lg">Explorar más</a>
+    </div>
+</header>
+
+<!-- Sección About -->
+<section class="about-section text-center my-5" style="background-color: #ffffff; padding: 50px 20px; border-radius: 8px;">
+    <div class="container">
+        <h2 class="display-5" style="color: #5d7457;">Acerca de AireDellin</h2>
+        <p class="lead" style="color: #333;">
+            Airedellín is a citizen science initiative aimed at addressing the growing issue of air quality in Medellín. We leverage modern technologies like machine learning, interactive maps, and sensor data to provide insights and predictions on PM2.5 levels.
         </p>
-    </section>
+        <p class="lead" style="color: #333;">
+            Our goal is to empower the community to take actionable steps toward improving public health.
+        </p>
+    </div>
+</section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Features</h2>
-
-        <div class="container">
-            <div class="row">
-                <!-- Feature 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://raw.githubusercontent.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin/main/docs/pictures/2.png" alt="Map Visualization" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="card-title">Map Visualization</h3>
-                            <p class="card-text">Real-time, interactive maps displaying air quality data from various sensors across the city, color-coded to show PM2.5 levels.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://raw.githubusercontent.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin/main/docs/pictures/4_new.png" alt="Predictions" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="card-title">Predictions</h3>
-                            <p class="card-text">Use machine learning models like Linear Regression, LSTM, and XGBoost to predict air quality patterns based on historical data.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://raw.githubusercontent.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin/main/docs/pictures/5.png" alt="Heatmap" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="card-title">Heatmap</h3>
-                            <p class="card-text">Visualize the intensity of PM2.5 concentrations with a heatmap to understand the air quality variations in Medellín.</p>
-                        </div>
-                    </div>
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <div class="card text-center" style="background-color: #5d7457; color: #fff;">
+                <img src="{{ url_for('static', path='img/mapvisualization.png') }}" class="card-img-top" alt="Map Visualization">
+                <div class="card-body">
+                    <h5 class="card-title">Map Visualization</h5>
+                    <p class="card-text">Real-time, interactive maps displaying air quality data from various sensors across the city, color-coded to show PM2.5 levels.</p>
                 </div>
             </div>
         </div>
-    </section>
-<h2>Empower Your Canairio Sensor: <a href="/add_donation">Link it to a Bank or Crypto Wallet and Start Receiving Donations Today!</a></h2>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Airedellín. All rights reserved. | <a href="https://github.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin">GitHub Repository</a></p>
-        <p>
-            Translations available in:
-            <a href="https://github.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin/blob/main/docs/readme_es.md">Español</a> | 
-            <a href="https://github.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin/blob/main/docs/readme_de.md">Deutsch</a> | 
-            <a href="https://github.com/Semillero-Inteligencia-Artificial-EAFIT/airedellin/blob/main/docs/readme_ru.md">Русский</a>
-        </p>
-    </footer>
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <div class="card text-center" style="background-color: #5d7457; color: #fff;">
+                <img src="{{ url_for('static', path='img/predictions.png') }}" class="card-img-top" alt="Predictions">
+                <div class="card-body">
+                    <h5 class="card-title">Predictions</h5>
+                    <p class="card-text">Use machine learning models like Linear Regression, LSTM, and XGBoost to predict air quality patterns based on historical data.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <div class="card text-center" style="background-color: #5d7457; color: #fff;">
+                <img src="{{ url_for('static', path='img/heatmap.png') }}" class="card-img-top" alt="Heatmap">
+                <div class="card-body">
+                    <h5 class="card-title">Heatmap</h5>
+                    <p class="card-text">Visualize the intensity of PM2.5 concentrations with a heatmap to understand the air quality variations in Medellín.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center">¡Ayúdanos a Mejorar!</h2>
+    <p class="text-center">Realiza una donación para apoyar nuestras iniciativas de monitoreo de la calidad del aire.</p>
+    <div class="text-center">
+        <img src="{{ url_for('static', path='qr/qr.png') }}" alt="Código QR para donaciones" class="img-fluid" style="max-width: 300px; margin-bottom: 20px;">
+        <p class="lead">Escanea el código QR para donar.</p>
+        <a href="#" class="btn btn-verde-personalizado btn-lg">Donar Ahora</a>
+    </div>
+</section>
+
+<div class="donation-text">
+    <p class="text-center">Empower Your Canairio Sensor: <a href="https://airedellin.jero98772.page/add_donation" target="_blank">Link it to a Bank or Crypto Wallet and Start Receiving Donations Today!</a></p>
+</div>
+
 {% endblock %}

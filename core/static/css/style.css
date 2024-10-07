@@ -1,0 +1,295 @@
+/* Fondo de la sección de encabezado */
+/* Fondo de la sección de encabezado */ 
+.hero-section {
+    background-image: url('../img/medellin.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100vw; 
+    margin: 0; 
+    padding: 0;
+    left: 50%; 
+    right: 50%; 
+    transform: translateX(-50%);
+}
+
+
+/* Añadir una capa de color semitransparente */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa de oscuridad */
+    z-index: 1;
+}
+
+.hero-section h1, .hero-section p, .hero-section a {
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 300px; /* Altura fija */
+    display: flex; /* Habilitar flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el texto */
+    padding: 0; /* Eliminar cualquier padding */
+    margin: 0 auto; /* Asegurar que esté centrado horizontalmente */
+    position: relative; /* Posicionamiento relativo */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.card-body {
+    display: flex; /* Habilitar flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 100%; /* Asegurar que ocupe toda la altura de la tarjeta */
+}
+
+
+/* Color verde militar tenue */
+:root {
+    --verde-militar: #5d7457; /* Tono de verde actualizado */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--verde-militar); /* Color del navbar */
+}
+
+/* Contenido colapsable */
+#navbarToggleExternalContent {
+    background-color: rgba(93, 116, 87, 0.8); /* Color de fondo del contenido colapsable con más transparencia */
+}
+
+/* Clase para el contenido colapsable */
+.bg-verde-militar {
+    background-color: rgba(93, 116, 87, 0.8); /* Color de fondo del contenido colapsable */
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.7); /* Color del texto atenuado */
+}
+
+.navbar a {
+    color: white; /* Cambia el color del texto del navbar a blanco */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--verde-militar);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white; /* Color del texto en el menú desplegable */
+    padding: 12px 16px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Cada opción en una línea */
+}
+
+/* Efecto hover en el menú desplegable */
+.dropdown-content a:hover {
+    background-color: #3b4f39; /* Verde oscuro */
+    color: white; /* Asegúrate de que el texto siga siendo blanco */
+}
+
+/* Pie de página */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--verde-militar); /* Color del pie de página */
+    color: white;
+    text-align: center;
+    padding: 15px; /* Agrega algo de padding */
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilo de botones */
+.btn-success {
+    background-color: var(--verde-militar); /* Aplica el mismo color a los botones */
+    border: none; /* Elimina el borde del botón */
+    color: white; /* Color del texto del botón */
+}
+
+.btn-success:hover {
+    background-color: #4b8e3c; /* Un tono más oscuro para el hover */
+}
+
+.btn-verde-personalizado {
+    background-color: #5d7457; /* Color verde deseado */
+    color: white; /* Color del texto */
+}
+
+.btn-verde-personalizado:hover {
+    background-color: #4a5e48; /* Color verde más oscuro para hover */
+    color: white; /* Color del texto */
+}
+
+.about-section {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de elevación */
+}
+
+.about-section h2 {
+    margin-bottom: 20px; /* Espacio inferior del título */
+}
+
+.about-section p {
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centrar el texto */
+}
+
+.card {
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 400px; /* Asegúrate de que todas las tarjetas tengan la misma altura */
+    overflow: hidden; /* Esto oculta cualquier contenido que exceda los límites de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Esto alinea el texto y el botón al final de la tarjeta */
+}
+
+.card img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantén la proporción de la imagen */
+    max-height: 150px; /* Limita la altura máxima para que no ocupe demasiado espacio */
+    object-fit: cover; /* Esto recortará la imagen para ajustarla a la tarjeta */
+}
+
+.card-body {
+    padding: 20px; /* Espaciado interno para el texto */
+}
+
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.form-section {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 50px 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px; /* Ancho máximo del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.btn-verde-personalizado {
+    background-color: #5d7457; /* Color verde personalizado */
+    border-color: #5d7457; /* Color del borde del botón */
+}
+
+.btn-verde-personalizado:hover {
+    background-color: #4a6c48; /* Color al pasar el cursor */
+    border-color: #4a6c48; /* Color del borde al pasar el cursor */
+}
+
+.footer-text {
+    margin: 20px 0; /* Espaciado vertical para el texto del pie de página */
+}
+
+.footer-link {
+    color: #5d7457; /* Color verde para el enlace del pie de página */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+
+
+
+.frame {
+    border: 3px solid #4a6c48;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+
+.donation-section, .dashboard-section, .ml-st-section {
+    margin-bottom: 30px;
+}
+.donation-frame img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.ml-st-section{
+    padding: 20px;
+    border: 2px dashed #4a6c48;
+    border-radius: 10px;
+    background: #f7faff;
+}
+
+.ml-st-section h3 {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #4a6c48;
+    border-color: #4a6c48;
+}
+.chart-frame {
+    border: 2px dashed #4a6c48;
+    border-radius: 10px;
+    background: #f7faff;
+    padding: 15px;
+}
+.table-summary {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table-summary thead th {
+    background-color: #4a6c48;
+    color: white;
+    text-align: center;
+}
+.table-summary tbody td {
+    text-align: center;
+}
+.table-summary tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table-summary tbody tr:hover {
+    background-color: #e2e6ea;
+}
+.table-summary td, .table-summary th {
+    padding: 15px;
+}

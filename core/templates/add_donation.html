@@ -1,41 +1,38 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
+    <header class="text-center my-4">
+        <h1>Data Entry Form</h1>
+    </header>
 
-    <!-- Data Entry Form Section -->
-    <section id="data-entry" class="data-entry">
-        <div class="container">
-            <h1 class="text-center">Data Entry Form</h1>
-            <form>
-
-                <!-- Account or Hash Input -->
-                <div class="form-group">
-                    <label for="account">Account or Hash</label>
-                    <input type="text" class="form-control" id="account" placeholder="Enter Account or Hash identification for user donations">
-                </div>
-
-                <!-- Hash Input -->
-                <div class="form-group">
-                    <label for="hash">Type of Entity for Donations</label>
-                    <input type="text" class="form-control" id="hash" placeholder="Bitcoin, Ethereum, PayPal, Bancolombia, etc.">
-                </div>
-
-                <!-- Sensor Name Input -->
-                <div class="form-group">
-                    <label for="sensorName">Sensor Name</label>
-                    <input type="text" class="form-control" id="sensorName" placeholder="Enter sensor name">
-                </div>
-
-                <!-- QR Code Input -->
-                <div class="form-group">
-                    <label for="qrCode" class="custom-file-upload">Upload QR Code</label>
-                    <input type="file" class="custom-file-input" id="qrCode" accept="image/*">
-                    <img id="imagePreview" class="image-preview" alt="QR Code Preview">
-                </div>
-                <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+    <section class="form-section">
+        <form action="/submit" method="post"> <!-- Enlace para el botón Submit -->
+            <div class="mb-3">
+                <label for="accountHash" class="form-label">Account or Hash</label>
+                <input type="text" class="form-control" id="accountHash" placeholder="Enter Account or Hash identification for user donations" required>
+            </div>
+            <div class="mb-3">
+                <label for="entityType" class="form-label">Type of Entity for Donations</label>
+                <select class="form-select" id="entityType" required>
+                    <option value="" disabled selected>Select type</option>
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="Ethereum">Ethereum</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Bancolombia">Bancolombia</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="sensorName" class="form-label">Sensor Name</label>
+                <input type="text" class="form-control" id="sensorName" placeholder="Enter sensor name" required>
+            </div>
+            <div class="mb-3">
+                <label for="qrCode" class="form-label">Upload QR Code</label>
+                <input type="file" class="form-control" id="qrCode" accept="image/*" required>
+                <div class="form-text">Note: We are thinking to move to <a href="https://nostr.com/" target="_blank" rel="noopener noreferrer">nostr</a> and maybe this not work.</div>
+            </div>
+            <button type="submit" class="btn btn-verde-personalizado">Submit</button>
+        </form>
     </section>
-    <p> as a note we are thinking to move to <a href="https://nostr.com/">nostr</a> and maybe this not work </p>
+
 {% endblock %}
